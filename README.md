@@ -1,8 +1,5 @@
-# PROC38-1_4-plantilla-proyecto
-## Plantilla del proyecto para la clase 38 nivel PRO 1:4.
-Modificación por parte del alumno de dos comentarios y cambio en la configuración Firebase de la base de datos.
-Etapa 2.
+# PROC39-1_4-plantilla-proyecto
+## Plantilla del proyecto para la clase 39 nivel PRO 1:4.
+Modificación por parte del alumno de dos comentarios y cambio en la configuración de Firebase de la base de datos. Etapa 3.
 
-### Comentarios en inglés:
-CarRacingGame1.0
-Car Racing Game Stage 1.0
+### Nombre en Inglés: project-template-my-quiz3

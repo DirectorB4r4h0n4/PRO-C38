@@ -1,4 +1,4 @@
-  class Contestant {
+      class Contestant {
   constructor(){
     this.index = null;
     this.answer = 0;
@@ -7,43 +7,29 @@
 
   getCount(){
     var contestantCountRef = database.ref('contestantCount');
-
-    //contestantCountRef.on("value",(data)=>{
-    //contestantCount = data.val();
-    //})
-
-
-     contestantCountRef.on("value",()=>{
-       contestantCount = data.val();
-     })
-
-    // contestantCountRef.on("value",(data)=>{
-    // contestantCount = data();
-    // })
-
+    contestantCountRef.on("value",(data)=>{
+      contestantCount = data.val();
+    })
   }
 
   updateCount(count){
-    // database.ref('/').update({
-    //   count: contestantCount
-    // });
-
-
-    // database.ref('/').update({
-    //   contestantCount: 0
-    // });
-
-
-    // database.ref('').update({
-    //   contestantCount: counts
-    // });
-
-
-     database.ref('/').update({
-     contestantCount: count
-     });
-
+    database.ref('/').update({
+      contestantCount: count
+    });
   }
 
- 
+  update(){
+    var contestantIndex = "contestants/contestant" + this.index;
+    database.ref(contestantIndex).set({
+      name:this.name,
+      answer:this.answer
+    });
+  }
+
+  static getPlayerInfo(){
+    var contestantInfoRef = database.ref('contestants');
+    contestantInfoRef.on("value",(data)=>{
+      allContestants = data.val();
+    })
+  }
 }
